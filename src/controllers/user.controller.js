@@ -17,7 +17,7 @@ const register = async (req, res)=>{
                 status : "failed",
                 reason : "User already exits"
             })
-            
+
         user = await User.create(req.body)
         return res
         .status(200)
