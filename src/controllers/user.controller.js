@@ -64,6 +64,9 @@ const login =  async (req, res)=>{
             reason : error.message
         })
     }
+
 }
 
 module.exports = { register, login }
+
+// console.log("hi")
