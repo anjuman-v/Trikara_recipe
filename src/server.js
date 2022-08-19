@@ -6,7 +6,7 @@ const mongoDBConnector = require('./configs/db')
 
 
 const { register, login } = require('./controllers/user.controller')
-//const recipeController  = require('./controllers/recipe.controller');
+const recipeController  = require('./controllers/recipe.controller');
 
 const app = express()
 app.use(express.json())
@@ -16,7 +16,7 @@ const port = process.env.PORT || 5000
 
 app.use('/signup', register)
 app.use('/signin', login)
-//app.use('/', recipeController)
+app.use('/', recipeController)
 
 
 
@@ -32,3 +32,5 @@ app.use('/signin', login)
             })
         }
     })
+
+    
