@@ -1,6 +1,6 @@
 // console.log("hii")
 const express = require('express')
-const cors = require('cors')
+// const cors = require('cors')
 
 const mongoDBConnector = require('./configs/db')
 
@@ -10,7 +10,7 @@ const recipeController  = require('./controllers/recipe.controller');
 
 const app = express()
 app.use(express.json())
-app.use(cors())
+// app.use(cors())
 const port = process.env.PORT || 5000
 
 
