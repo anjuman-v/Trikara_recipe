@@ -17,7 +17,7 @@ router.post('/recipe', auth,  async (req, res) => {
 })
 
 
-router.get('/recipe/:id', auth,  async(req, res) => {
+router.get('/recipe/:id',  async(req, res) => {
     try{
         const recipe = await Recipe.findById(req.params.id).lean().exec()
         return res.status(200).send(recipe)
@@ -57,7 +57,7 @@ router.patch("/recipe/:id", auth, async (req, res) => {
 });
 //sdfghj
 
-router.get('/recipes', auth,  async(req, res) => {
+router.get('/recipes',  async(req, res) => {
   
     try {
         const recipe = await Recipe.find().lean().exec()
