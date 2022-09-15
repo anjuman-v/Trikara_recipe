@@ -35,9 +35,10 @@ const auth = async(req, res, next )=>{
         .status(500)
         .send({
             status : "failed"
-        })
+        });
     }
     req.body.user = user
     next()
 }
-module.exports = { auth }
+
+module.exports = { auth };

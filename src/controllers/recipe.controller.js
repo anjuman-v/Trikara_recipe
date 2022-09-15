@@ -1,13 +1,14 @@
-const { Router } = require("express")
+const { Router } = require("express");
+
 const { auth } = require('../middleware/auth');
 
 const Recipe = require('../models/recipe.model');
 
-const router = Router()
-
+const router = Router();
 
 router.post('/recipe', auth,  async (req, res) => {
-    try{
+   
+  try{
         const recipe = await Recipe.create(req.body)
         return res.status(200).send(recipe)
     }
