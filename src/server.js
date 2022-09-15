@@ -12,7 +12,8 @@ app.use(express.json())
 
 
 const port = process.env.PORT || 5000
-
+//
+//cors 
 const corsOptions ={
     origin:'https://trikara-recipe-client-anzy.vercel.app', 
     credentials:true,           
@@ -24,12 +25,10 @@ app.use('/signup', register)
 app.use('/signin', login)
 app.use('/', recipeController)
 
-
-
-    app.listen(port, async ()=>{
+ app.listen(port, async ()=>{
         try {
             await mongoDBConnector()
-            console.log(`Server is listening on the port ${port} `)    
+            console.log(`Server is listening on the port ${port}`)    
         } 
         catch (error) {
             console.log({
