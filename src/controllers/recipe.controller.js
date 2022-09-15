@@ -6,7 +6,7 @@ const Recipe = require('../models/recipe.model');
 
 const router = Router();
 
-router.post('/recipe', auth,  async (req, res) => {
+router.post('/recipe',  async (req, res) => {
    
   try{
         const recipe = await Recipe.create(req.body)
