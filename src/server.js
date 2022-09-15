@@ -15,7 +15,7 @@ const port = process.env.PORT || 5000
 //
 //cors 
 const corsOptions ={
-    origin:'https://trikara-recipe-client-anzy.vercel.app', 
+    origin:'http://localhost:3000/', 
     credentials:true,           
     optionSuccessStatus:200
 }
