@@ -42,7 +42,7 @@ router.delete("/recipe/:id", auth, async (req, res) => {
 });
 
 
-router.patch("/recipe/:id", auth, async (req, res) => {
+router.patch("/recipe/:id", async (req, res) => {
     try {
       const recipe = await Recipe.findByIdAndUpdate(req.params.id, req.body, {
         new: true,

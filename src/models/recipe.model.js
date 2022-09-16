@@ -14,3 +14,5 @@ const recipeSchema = new mongoose.Schema(
 )
 
 module.exports = mongoose.model('recipe', recipeSchema)
+
+// https://trikararecipeapi.herokuapp.com/
